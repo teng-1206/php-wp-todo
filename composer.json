@@ -1,0 +1,19 @@
+{
+    "name": "teng/php-wp-todo",
+    "description": "WordPress Plugin",
+    "type": "project",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Ng Qi Teng",
+            "email": "Cmdcool3@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Inc\\": "./inc"
+        }
+    }
+}
