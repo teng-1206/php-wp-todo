@@ -3,6 +3,8 @@
  * @package wp-todo
  */
 
+namespace Inc\Base;
+
 class Custom_Post_Type
 {
     public function register()
@@ -10,20 +12,20 @@ class Custom_Post_Type
         add_action( 'init', array( $this, 'custom_post_type' ) );
     }
 
-    private function custom_post_type()
+    public function custom_post_type()
     {
         $labels = array(
-            'name'               => _x( 'Todos', 'post type general name' ),
+            'name'               => _x( 'Todo', 'post type general name' ),
             'singular_name'      => _x( 'Todo', 'post type singular name' ),
             'add_new'            => _x( 'Add New', 'todo' ),
             'add_new_item'       => __( 'Add New Todo' ),
             'edit_item'          => __( 'Edit Todo' ),
             'new_item'           => __( 'New Todo' ),
-            'all_items'          => __( 'All Todos' ),
+            'all_items'          => __( 'All Todo' ),
             'view_item'          => __( 'View Todo' ),
-            'search_items'       => __( 'Search Todos' ),
-            'not_found'          => __( 'No Todos found' ),
-            'not_found_in_trash' => __( 'No Todos found in the Trash' ), 
+            'search_items'       => __( 'Search Todo' ),
+            'not_found'          => __( 'No Todo found' ),
+            'not_found_in_trash' => __( 'No Todo found in the Trash' ), 
             // 'parent_item_colon'  => ,
             'menu_name'          => 'Todo'
         );

@@ -19,7 +19,7 @@ class Settings_Links
 
     }
 
-    private function settings_links( $links )
+    public function settings_links( $links )
     {
         $settings_link = '<a href="admin.php?page=wp_todo_plugin">Settings</a>';
 		array_push( $links, $settings_link );
