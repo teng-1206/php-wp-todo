@@ -5,7 +5,9 @@
 
 namespace Inc\Base;
 
-class Enqueue
+use \Inc\Base\Base_Controller;
+
+class Enqueue extends Base_Controller
 {
     public function register()
     {
@@ -14,7 +16,7 @@ class Enqueue
 
     public function enqueue()
     {
-        wp_enqueue_style( 'wp-todo-css', PLUGIN_URL . 'assets/css/wp-todo-css.css' );
-		wp_enqueue_script( 'wp-todo-js', PLUGIN_URL . 'assets/js/wp-todo-js.js' );
+        wp_enqueue_style( 'wp-todo-css', $this->plugin_url . 'assets/css/wp-todo-css.css' );
+		wp_enqueue_script( 'wp-todo-js', $this->plugin_url . 'assets/js/wp-todo-js.js' );
     }
 }
